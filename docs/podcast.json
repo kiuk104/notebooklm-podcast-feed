@@ -1,0 +1,19 @@
+{
+  "title": "내 NotebookLM 팟캐스트",
+  "description": "NotebookLM 음성개요 자동 수집 피드.",
+  "language": "ko",
+  "ownerName": "kiuk104",
+  "ownerEmail": "kiuk104@gmail.com",
+  "image": "",
+  "category": "Education",
+  "explicit": false,
+  "retention": {
+    "maxItems": 50,
+    "maxAgeDays": 365
+  },
+  "transcode": {
+    "enabled": false,
+    "bitrate": "64k",
+    "mono": true
+  }
+}

@@ -1,0 +1,51 @@
+name: Build podcast feed
+
+on:
+  push:
+    paths:
+      - 'docs/episodes/**'
+      - 'docs/podcast.json'
+      - 'scripts/build_feed.py'
+      - 'scripts/transcode.py'
+      - '.github/workflows/build-feed.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-feed
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # podcast.json 의 transcode.enabled 가 true 일 때만 실제 변환. ffmpeg 는
+      # ubuntu-latest 에 기본 설치되어 있음 (libmp3lame 포함). enabled=false 면 no-op.
+      - name: Transcode m4a/mp4 → mp3 (if enabled)
+        run: python scripts/transcode.py
+
+      - name: Build feed.xml
+        env:
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python scripts/build_feed.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # docs/episodes/ 에서 retention 으로 삭제된 파일도 stage 되도록 -A.
+          git add -A docs/feed.xml docs/episodes
+          if git diff --cached --quiet; then
+            echo 'feed unchanged, skipping commit'
+          else
+            git commit -m 'auto: rebuild feed'
+            git push
+          fi
