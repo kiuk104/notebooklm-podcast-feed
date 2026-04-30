@@ -1,10 +1,10 @@
 {
-  "title": "내 NotebookLM 팟캐스트",
-  "description": "NotebookLM 음성개요 자동 수집 피드.",
+  "title": "기욱의 NotebookLM chrome-extension 팟캐스트",
+  "description": "NotebookLM 음성개요 자동 수집 피드.\nchrome-extension",
   "language": "ko",
   "ownerName": "kiuk104",
   "ownerEmail": "kiuk104@gmail.com",
-  "image": "",
+  "image": "https://kiuk104.github.io/notebooklm-podcast-feed/cover.png",
   "category": "Education",
   "explicit": false,
   "retention": {
