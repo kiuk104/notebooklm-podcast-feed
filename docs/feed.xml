@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>내 NotebookLM 팟캐스트</title>
+    <link>https://kiuk104.github.io/notebooklm-podcast-feed/</link>
+    <atom:link href="https://kiuk104.github.io/notebooklm-podcast-feed/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>NotebookLM 음성개요 자동 수집 피드.</description>
+    <language>ko</language>
+    <itunes:author>kiuk104</itunes:author>
+    <itunes:owner>
+      <itunes:name>kiuk104</itunes:name>
+      <itunes:email>kiuk104@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Education"/>
+    <itunes:explicit>no</itunes:explicit>
+  </channel>
+</rss>
