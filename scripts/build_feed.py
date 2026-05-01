@@ -125,6 +125,20 @@ def apply_retention(items: list[dict], retention: dict | None) -> tuple[list[dic
     if isinstance(d, int) and d > 0:
         cutoff = datetime.now(timezone.utc) - timedelta(days=d)
         keep = [it for it in keep if it["pubDate"] >= cutoff]
+    # 용량 기반: 최신 순으로 누적해서 cap 넘으면 그 뒤(=더 오래된 것) 자름.
+    # GitHub Pages 의 1 GB artifact 권장 한도 회피 목적. 가장 최신 1편은 무조건
+    # 살려둠 — cap 보다 큰 단일 파일이 들어와도 feed 가 텅 비지 않도록 안전망.
+    mb = retention.get("maxTotalMB")
+    if isinstance(mb, (int, float)) and mb > 0:
+        cap = int(mb * 1024 * 1024)
+        fitted: list[dict] = []
+        total = 0
+        for it in keep:  # 이미 최신순
+            if fitted and total + it["size"] > cap:
+                break
+            fitted.append(it)
+            total += it["size"]
+        keep = fitted
     keep_set = {it["filename"] for it in keep}
     drop = [it for it in items if it["filename"] not in keep_set]
     return keep, drop
