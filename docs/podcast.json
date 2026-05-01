@@ -12,7 +12,7 @@
     "maxAgeDays": 365
   },
   "transcode": {
-    "enabled": false,
+    "enabled": true,
     "bitrate": "64k",
     "mono": true
   }
