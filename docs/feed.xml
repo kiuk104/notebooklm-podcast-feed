@@ -15,5 +15,12 @@ chrome-extension</description>
     <itunes:image href="https://kiuk104.github.io/notebooklm-podcast-feed/cover.png"/>
     <itunes:category text="Education"/>
     <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title>크림슨 데저트가 당신 인생 최고의 게임이 될 수 있는 이유 리뷰   Yo — 1만 개의 혹평을 찬사로 바꾼 비결</title>
+      <description>크림슨 데저트가 당신 인생 최고의 게임이 될 수 있는 이유 리뷰   Yo — 1만 개의 혹평을 찬사로 바꾼 비결</description>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast-feed/episodes/20260430__%ED%81%AC%EB%A6%BC%EC%8A%A8-%EB%8D%B0%EC%A0%80%ED%8A%B8%EA%B0%80-%EB%8B%B9%EC%8B%A0-%EC%9D%B8%EC%83%9D-%EC%B5%9C%EA%B3%A0%EC%9D%98-%EA%B2%8C%EC%9E%84%EC%9D%B4-%EB%90%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EC%9D%B4%EC%9C%A0-%EB%A6%AC%EB%B7%B0---Yo__805b33e4__1%EB%A7%8C-%EA%B0%9C%EC%9D%98-%ED%98%B9%ED%8F%89%EC%9D%84-%EC%B0%AC%EC%82%AC%EB%A1%9C-%EB%B0%94%EA%BE%BC-%EB%B9%84%EA%B2%B0.m4a" length="38724103" type="audio/mp4"/>
+      <guid isPermaLink="false">20260430__크림슨-데저트가-당신-인생-최고의-게임이-될-수-있는-이유-리뷰---Yo__805b33e4__1만-개의-혹평을-찬사로-바꾼-비결.m4a</guid>
+    </item>
   </channel>
 </rss>
