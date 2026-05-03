@@ -27,8 +27,14 @@ jobs:
         with:
           python-version: '3.12'
 
-      # podcast.json 의 transcode.enabled 가 true 일 때만 실제 변환. ffmpeg 는
-      # ubuntu-latest 에 기본 설치되어 있음 (libmp3lame 포함). enabled=false 면 no-op.
+      # ubuntu-latest 가 22.04 → 24.04 로 업그레이드되면서 ffmpeg 가 default
+      # 설치에서 빠짐 (FileNotFoundError: 'ffmpeg' 로 fail). 명시 설치해야 안정.
+      # 캐시 update 생략하고 바로 install — apt 가 알아서 최신 ffmpeg + libmp3lame.
+      - name: Install ffmpeg (for transcode)
+        run: sudo apt-get install -y --no-install-recommends ffmpeg
+
+      # podcast.json 의 transcode.enabled 가 true 일 때만 실제 변환. enabled=false
+      # 면 no-op (transcode.py 가 빠져나감).
       - name: Transcode m4a/mp4 → mp3 (if enabled)
         run: python scripts/transcode.py
 
