@@ -8,8 +8,7 @@
   "category": "Education",
   "explicit": false,
   "retention": {
-    "maxItems": 50,
-    "maxAgeDays": 365
+    "maxTotalMB": 900
   },
   "transcode": {
     "enabled": true,
