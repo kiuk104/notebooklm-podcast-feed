@@ -43,15 +43,45 @@ jobs:
           BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
         run: python scripts/build_feed.py
 
+      # 익스텐션의 ghPut 이 짧은 간격으로 여러 episode 를 push 하면 첫 workflow
+      # 가 commit + push 하는 사이에 main 이 다음 commit 으로 advance 돼 push 가
+      # rejected (non fast-forward) 됨. concurrency group 은 같은 workflow 두 run
+      # 사이만 막을 뿐 외부 push 와는 무관해서 별도 회복 필요. 매 retry 마다
+      # origin/main 으로 reset 후 idempotent 빌드 재실행 — feed.xml + retention 이
+      # 항상 최신 episodes 디렉토리 기준으로 다시 산출되도록.
       - name: Commit if changed
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          # docs/episodes/ 에서 retention 으로 삭제된 파일도 stage 되도록 -A.
-          git add -A docs/feed.xml docs/episodes
-          if git diff --cached --quiet; then
-            echo 'feed unchanged, skipping commit'
-          else
+
+          attempts=0
+          max_attempts=3
+          while [ $attempts -lt $max_attempts ]; do
+            attempts=$((attempts + 1))
+
+            if [ $attempts -gt 1 ]; then
+              echo "[attempt $attempts] fetching latest main and rebuilding"
+              git fetch origin main
+              git reset --hard origin/main
+              python scripts/transcode.py
+              python scripts/build_feed.py
+            fi
+
+            # docs/episodes/ 에서 retention 으로 삭제된 파일도 stage 되도록 -A.
+            git add -A docs/feed.xml docs/episodes
+            if git diff --cached --quiet; then
+              echo 'feed unchanged, skipping commit'
+              exit 0
+            fi
+
             git commit -m 'auto: rebuild feed'
-            git push
-          fi
+            if git push; then
+              echo "[attempt $attempts] push succeeded"
+              exit 0
+            fi
+            echo "[attempt $attempts] push rejected (concurrent push) — retrying"
+            sleep $((attempts * 2))
+          done
+
+          echo "push failed after $max_attempts attempts"
+          exit 1
