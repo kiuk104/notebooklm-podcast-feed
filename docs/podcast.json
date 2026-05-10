@@ -8,7 +8,7 @@
   "category": "Education",
   "explicit": false,
   "retention": {
-    "maxTotalMB": 900
+    "maxTotalMB": 2000
   },
   "transcode": {
     "enabled": true,
