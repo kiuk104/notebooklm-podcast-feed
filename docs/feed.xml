@@ -15,5 +15,12 @@ chrome-extension</description>
     <itunes:image href="https://kiuk104.github.io/notebooklm-podcast-feed/cover.png"/>
     <itunes:category text="Education"/>
     <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title>더 많은 HBM 믿을 건 젠슨황나라면 그렇게 가격 안 올릴 것 TSMC  — 반도체 호황에도 환율이 1561원까지 폭등한 이유</title>
+      <description>더 많은 HBM 믿을 건 젠슨황나라면 그렇게 가격 안 올릴 것 TSMC  — 반도체 호황에도 환율이 1561원까지 폭등한 이유</description>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast-feed/episodes/20260608__%EB%8D%94-%EB%A7%8E%EC%9D%80-HBM-%EB%AF%BF%EC%9D%84-%EA%B1%B4-%EC%A0%A0%EC%8A%A8%ED%99%A9%EB%82%98%EB%9D%BC%EB%A9%B4-%EA%B7%B8%EB%A0%87%EA%B2%8C-%EA%B0%80%EA%B2%A9-%EC%95%88-%EC%98%AC%EB%A6%B4-%EA%B2%83-TSMC-__fb73d486__%EB%B0%98%EB%8F%84%EC%B2%B4-%ED%98%B8%ED%99%A9%EC%97%90%EB%8F%84-%ED%99%98%EC%9C%A8%EC%9D%B4-1561%EC%9B%90%EA%B9%8C%EC%A7%80-%ED%8F%AD%EB%93%B1%ED%95%9C-%EC%9D%B4%EC%9C%A0.mp3" length="8717568" type="audio/mpeg"/>
+      <guid isPermaLink="false">20260608__더-많은-HBM-믿을-건-젠슨황나라면-그렇게-가격-안-올릴-것-TSMC-__fb73d486__반도체-호황에도-환율이-1561원까지-폭등한-이유.mp3</guid>
+    </item>
   </channel>
 </rss>
