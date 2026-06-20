@@ -190,5 +190,19 @@ chrome-extension</description>
       <enclosure url="https://kiuk104.github.io/notebooklm-podcast-feed/episodes/20250609__%EB%A1%9C%EC%8A%A4%EC%95%A4%EC%A0%A4%EB%A0%88%EC%8A%A4-%EC%8B%9C%EC%9C%84%EC%99%80-%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EC%99%B8%EA%B5%90-%EC%A0%95%EC%B1%85-%EC%A2%8C%EC%A0%88__0af696d4__%EB%A1%9C%EC%8A%A4%EC%95%A4%EC%A0%A4%EB%A0%88%EC%8A%A4-%EC%8B%9C%EC%9C%84%EC%99%80-%ED%8A%B8%EB%9F%BC%ED%94%84%EC%9D%98-%EC%99%B8%EA%B5%90-%EC%A0%95%EC%B1%85-%EC%A2%8C%EC%A0%88.mp3" length="3226944" type="audio/mpeg"/>
       <guid isPermaLink="false">20250609__로스앤젤레스-시위와-트럼프의-외교-정책-좌절__0af696d4__로스앤젤레스-시위와-트럼프의-외교-정책-좌절.mp3</guid>
     </item>
+    <item>
+      <title>연동교회 120년사 — 연동교회 120년사</title>
+      <description>연동교회 120년사 — 연동교회 120년사</description>
+      <pubDate>Sun, 08 Jun 2025 00:00:00 GMT</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast-feed/episodes/20250608__%EC%97%B0%EB%8F%99%EA%B5%90%ED%9A%8C-120%EB%85%84%EC%82%AC__4611d55b__%EC%97%B0%EB%8F%99%EA%B5%90%ED%9A%8C-120%EB%85%84%EC%82%AC.mp3" length="3103296" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250608__연동교회-120년사__4611d55b__연동교회-120년사.mp3</guid>
+    </item>
+    <item>
+      <title>Rubio erwartet von Russland in Krze Vorl — Rubio erwartet von Russland in Krze Vorl</title>
+      <description>Rubio erwartet von Russland in Krze Vorl — Rubio erwartet von Russland in Krze Vorl</description>
+      <pubDate>Wed, 21 May 2025 00:00:00 GMT</pubDate>
+      <enclosure url="https://kiuk104.github.io/notebooklm-podcast-feed/episodes/20250521__Rubio-erwartet-von-Russland-in-Krze-Vorl__58ad2938__Rubio-erwartet-von-Russland-in-Krze-Vorl.mp3" length="2235840" type="audio/mpeg"/>
+      <guid isPermaLink="false">20250521__Rubio-erwartet-von-Russland-in-Krze-Vorl__58ad2938__Rubio-erwartet-von-Russland-in-Krze-Vorl.mp3</guid>
+    </item>
   </channel>
 </rss>
