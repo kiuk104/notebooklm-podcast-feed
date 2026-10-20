@@ -79,7 +79,7 @@ def render(cfg: dict, items: list[dict]) -> str:
         '  <channel>',
         f'    <title>{escape(cfg["title"])}</title>',
         f'    <link>{escape(cfg["baseUrl"])}</link>',
-        f'    <atom:link href="{escape(cfg["baseUrl"])}feed.xml" rel="self" type="application/rss+xml"/>',
+        f'    <atom:link href="{escape(cfg.get("selfUrl") or cfg["baseUrl"] + "feed.xml")}" rel="self" type="application/rss+xml"/>',
         f'    <description>{escape(cfg.get("description", ""))}</description>',
         f'    <language>{escape(cfg.get("language", "ko"))}</language>',
     ]
@@ -98,15 +98,16 @@ def render(cfg: dict, items: list[dict]) -> str:
     lines.append(f'    <itunes:explicit>{"yes" if cfg.get("explicit") else "no"}</itunes:explicit>')
 
     for it in items:
-        url = cfg["baseUrl"] + "episodes/" + quote(it["filename"])
-        ep_title = f'{it["notebook"]} — {it["title"]}'
+        url = it.get("url") or cfg["baseUrl"] + "episodes/" + quote(it["filename"])
+        ep_title = it.get("display_title") or f'{it["notebook"]} — {it["title"]}'
         lines += [
             '    <item>',
             f'      <title>{escape(ep_title)}</title>',
-            f'      <description>{escape(ep_title)}</description>',
+            f'      <description>{escape(it.get("description") or ep_title)}</description>',
             f'      <pubDate>{format_datetime(it["pubDate"], usegmt=True)}</pubDate>',
             f'      <enclosure url="{escape(url)}" length="{it["size"]}" type="{it["mime"]}"/>',
             f'      <guid isPermaLink="false">{escape(it["filename"])}</guid>',
+            *([f'      <itunes:duration>{escape(str(it["duration"]))}</itunes:duration>'] if it.get("duration") else []),
             '    </item>',
         ]
 
@@ -144,6 +145,62 @@ def apply_retention(items: list[dict], retention: dict | None) -> tuple[list[dic
     return keep, drop
 
 
+# fokus-podcast: external episodes
+# docs/episodes/external.json 에 적힌 에피소드(오디오는 GitHub Releases)를 **별도 피드**로 만듭니다.
+#   → docs/episodes/fokus-deutsch.xml (기존 feed.xml 에는 섞이지 않음)
+# 저장소 용량을 쓰지 않으므로 retention(maxTotalMB) 계산과도 무관합니다. Fokus Podcast 앱이 관리합니다.
+def load_external() -> tuple[dict, list[dict]]:
+    path = EPISODES_DIR / "external.json"
+    if not path.exists():
+        return {}, []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        print(f"external.json 읽기 실패: {e}", file=sys.stderr)
+        return {}, []
+    feed, rows = ({}, data) if isinstance(data, list) else (data.get("feed") or {}, data.get("episodes") or [])
+    items = []
+    for r in rows:
+        try:
+            items.append({
+                "filename": r["filename"],
+                "url": r["url"],
+                "size": int(r.get("size") or 0),
+                "mime": r.get("mime") or "audio/mpeg",
+                "pubDate": datetime.fromisoformat(r["pubDate"]),
+                "notebook": r.get("label", ""),
+                "title": r.get("title", r["filename"]),
+                "display_title": r.get("display_title") or r.get("title"),
+                "description": r.get("description"),
+                "duration": r.get("duration"),
+            })
+        except (KeyError, ValueError) as e:
+            print(f"external.json 항목 건너뜀: {e}", file=sys.stderr)
+    items.sort(key=lambda x: (x["pubDate"], x["filename"]), reverse=True)
+    return feed, items
+
+
+def write_external_feed(cfg: dict) -> None:
+    feed, items = load_external()
+    name = feed.get("file") or "fokus-deutsch.xml"
+    if not re.fullmatch(r"[A-Za-z0-9_-]+\.xml", name):
+        print(f"external feed 파일 이름이 이상해 건너뜀: {name}", file=sys.stderr)
+        return
+    out = EPISODES_DIR / name
+    if not items and not out.exists():
+        return
+    ecfg = {k: cfg[k] for k in ("baseUrl", "ownerName", "ownerEmail", "language", "category", "explicit") if k in cfg}
+    ecfg["title"] = feed.get("title") or "Fokus Deutsch Podcast"
+    ecfg["description"] = feed.get("description") or ""
+    if feed.get("image"):
+        ecfg["image"] = feed["image"]
+    if feed.get("author"):
+        ecfg["ownerName"] = feed["author"]
+    ecfg["selfUrl"] = cfg["baseUrl"] + "episodes/" + name
+    out.write_text(render(ecfg, items), encoding="utf-8")
+    print(f"wrote {out.relative_to(ROOT)} ({len(items)} external episodes)")
+
+
 def main() -> None:
     cfg = load_config()
     items = collect_episodes()
@@ -157,6 +214,7 @@ def main() -> None:
             print(f"remove failed: {it['filename']}: {e}", file=sys.stderr)
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(render(cfg, keep), encoding="utf-8")
+    write_external_feed(cfg)
     print(f"wrote {OUTPUT_FILE.relative_to(ROOT)} ({len(keep)} episodes; {len(drop)} removed)")
 
 
