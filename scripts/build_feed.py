@@ -75,7 +75,7 @@ def render(cfg: dict, items: list[dict]) -> str:
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" '
         'xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" '
-        'xmlns:atom="http://www.w3.org/2005/Atom">',
+        'xmlns:atom="http://www.w3.org/2005/Atom"' + (' xmlns:podcast="https://podcastindex.org/namespace/1.0"' if cfg.get("podcastNs") else "") + '>',
         '  <channel>',
         f'    <title>{escape(cfg["title"])}</title>',
         f'    <link>{escape(cfg["baseUrl"])}</link>',
@@ -108,6 +108,7 @@ def render(cfg: dict, items: list[dict]) -> str:
             f'      <enclosure url="{escape(url)}" length="{it["size"]}" type="{it["mime"]}"/>',
             f'      <guid isPermaLink="false">{escape(it["filename"])}</guid>',
             *([f'      <itunes:duration>{escape(str(it["duration"]))}</itunes:duration>'] if it.get("duration") else []),
+            *[f'      <podcast:transcript url="{escape(t["url"])}" type="{escape(t["type"])}" language="de"/>' for t in (it.get("transcripts") or [])],
             '    </item>',
         ]
 
@@ -145,7 +146,7 @@ def apply_retention(items: list[dict], retention: dict | None) -> tuple[list[dic
     return keep, drop
 
 
-# fokus-podcast: external episodes
+# fokus-podcast: external episodes (v2: transcripts)
 # docs/episodes/external.json 에 적힌 에피소드(오디오는 GitHub Releases)를 **별도 피드**로 만듭니다.
 #   → docs/episodes/fokus-deutsch.xml (기존 feed.xml 에는 섞이지 않음)
 # 저장소 용량을 쓰지 않으므로 retention(maxTotalMB) 계산과도 무관합니다. Fokus Podcast 앱이 관리합니다.
@@ -173,6 +174,7 @@ def load_external() -> tuple[dict, list[dict]]:
                 "display_title": r.get("display_title") or r.get("title"),
                 "description": r.get("description"),
                 "duration": r.get("duration"),
+                "transcripts": r.get("transcripts") or [],
             })
         except (KeyError, ValueError) as e:
             print(f"external.json 항목 건너뜀: {e}", file=sys.stderr)
@@ -197,6 +199,7 @@ def write_external_feed(cfg: dict) -> None:
     if feed.get("author"):
         ecfg["ownerName"] = feed["author"]
     ecfg["selfUrl"] = cfg["baseUrl"] + "episodes/" + name
+    ecfg["podcastNs"] = True  # <podcast:transcript> 를 쓰기 위한 네임스페이스 (이 피드에만)
     out.write_text(render(ecfg, items), encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)} ({len(items)} external episodes)")
 
