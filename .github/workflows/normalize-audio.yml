@@ -1,0 +1,53 @@
+name: Normalize external audio (-16 LUFS)
+
+# fokus-podcast 가 올린 외부 에피소드(GitHub Releases 오디오)의 음량을 팟캐스트 표준으로 맞춤.
+# external.json 이 바뀔 때(새 에피소드)마다 자동으로, 또는 수동 실행.
+# GITHUB_TOKEN 으로 한 push 는 다른 워크플로를 깨우지 않으므로 피드(build_feed.py)도 여기서 같이 다시 만든다.
+on:
+  push:
+    paths:
+      - 'docs/episodes/external.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-feed
+  cancel-in-progress: false
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # apt 미러가 멈추는 일이 있어 정적 ffmpeg(imageio-ffmpeg) 사용
+      - name: Get ffmpeg
+        run: |
+          pip install --quiet imageio-ffmpeg
+          echo "FFMPEG=$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')" >> "$GITHUB_ENV"
+
+      - name: Normalize + rebuild feed + commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            if [ $attempt -gt 1 ]; then git fetch origin main && git reset --hard origin/main; fi
+            python scripts/normalize_external.py
+            python scripts/build_feed.py
+            git add -A docs/episodes/external.json docs/episodes/*.xml docs/feed.xml
+            if git diff --cached --quiet; then echo 'nothing to commit'; exit 0; fi
+            git commit -m 'auto: normalize external audio to -16 LUFS + rebuild feed'
+            if git push; then exit 0; fi
+            echo "push rejected — retry $attempt"; sleep $((attempt * 3))
+          done
+          exit 1
