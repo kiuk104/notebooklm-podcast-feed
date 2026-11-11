@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261111__Fokus-Deutsch__b9b0dfec__-GPT-6-Astra가-나온-뒤로-AGI에-도달했다는-말이-매일-들립니.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-fc189da0bf56-752b50f8.mp3",
-      "size": 16876416,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-fc189da0bf56-752b50f8-n16.mp3",
+      "size": 16981676,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-11T12:15:45+00:00",
       "label": "Fokus Deutsch",
@@ -23,12 +23,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-fc189da0bf56-bcf5aa73.txt",
           "type": "text/plain"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-28.1LUFS"
     },
     {
       "filename": "20261111__Fokus-Deutsch__ca780b92__-다리오-아모데이가-장문의-답변을-올렸습니다.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-11be63e943b3-c8d077b4.mp3",
-      "size": 6009792,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-11be63e943b3-c8d077b4-n16.mp3",
+      "size": 6053036,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-11T12:12:23+00:00",
       "label": "Fokus Deutsch",
@@ -41,12 +43,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-11be63e943b3-e2034de7.txt",
           "type": "text/plain"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-28.3LUFS"
     },
     {
       "filename": "20261109__Fokus-Deutsch__a80039cd__단어편-Selenskyj-bei-Jan-Boehmermann-Treffe.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-22aeb91c7c7e-55f9b199.mp3",
-      "size": 4770624,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-22aeb91c7c7e-55f9b199-n16.mp3",
+      "size": 4771052,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-10T09:14:35+00:00",
       "label": "Fokus Deutsch",
@@ -63,12 +67,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-22aeb91c7c7e-24d490d2.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261109__Fokus-Deutsch__66efd8c9__문장편-Selenskyj-bei-Jan-Boehmermann-Treffe.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2437079233b6-120c78b2.mp3",
-      "size": 16446720,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2437079233b6-120c78b2-n16.mp3",
+      "size": 16447148,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-09T11:01:04+00:00",
       "label": "Fokus Deutsch",
@@ -85,12 +91,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2437079233b6-dc338266.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.8LUFS"
     },
     {
       "filename": "20261107__Fokus-Deutsch__009a3e98__AI가-AI를-만들기-시작하면서-앤트로픽의-발전-속도는-1년에-2년치로-.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-17213268e978-1e51c2f8.mp3",
-      "size": 9886464,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-17213268e978-1e51c2f8-n16.mp3",
+      "size": 9959084,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-07T12:47:20+00:00",
       "label": "Fokus Deutsch",
@@ -103,12 +111,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-17213268e978-a2b3156e.txt",
           "type": "text/plain"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-27.8LUFS"
     },
     {
       "filename": "20261106__Fokus-Deutsch__fa9088e1__문장편-소시민-곁을-지킨-아이방거의-별세-Teil-22.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-47cd34c78760-8d8db5b5.mp3",
-      "size": 11073792,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-47cd34c78760-8d8db5b5-n16.mp3",
+      "size": 11074220,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-06T08:37:55+00:00",
       "label": "Fokus Deutsch",
@@ -125,12 +135,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-47cd34c78760-4867e1a8.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261106__Fokus-Deutsch__e978173a__문장편-소시민-곁을-지킨-아이방거의-별세-Teil-12.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-13cb99711b60-2e38da4b.mp3",
-      "size": 9174144,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-13cb99711b60-2e38da4b-n16.mp3",
+      "size": 9174572,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-06T08:37:40+00:00",
       "label": "Fokus Deutsch",
@@ -147,12 +159,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-13cb99711b60-7d616d63.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261106__Fokus-Deutsch__bcc979fd__단어편-정치와-시사를-읽는-독일어-표현.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-5e1a3ba6c461-3e3c4f0d.mp3",
-      "size": 7524480,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-5e1a3ba6c461-3e3c4f0d-n16.mp3",
+      "size": 7524908,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-06T08:37:26+00:00",
       "label": "Fokus Deutsch",
@@ -169,12 +183,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-5e1a3ba6c461-628eb916.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261028__Fokus-Deutsch__1d0c4b86__문장편-스티브-잡스의-10분-산책-루틴.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-864e03cc1ca1-f5972b5f.mp3",
-      "size": 13736640,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-864e03cc1ca1-f5972b5f-n16.mp3",
+      "size": 13737068,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-28T12:04:31+00:00",
       "label": "Fokus Deutsch",
@@ -191,12 +207,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-864e03cc1ca1-22b34b1c.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261028__Fokus-Deutsch__1ddfbe8d__단어편-생각을-행동으로-바꾸는-독일어-표현.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-0b00cf0a1824-39228412.mp3",
-      "size": 4540032,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-0b00cf0a1824-39228412-n16.mp3",
+      "size": 4540460,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-28T12:02:53+00:00",
       "label": "Fokus Deutsch",
@@ -213,12 +231,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-0b00cf0a1824-aacb4200.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__b22bb107__문장편-김나지움-상급과정-과목-선택-안내-Teil-66.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-b0627e175061-e0ae0bdb.mp3",
-      "size": 10059648,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-b0627e175061-e0ae0bdb-n16.mp3",
+      "size": 10060076,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:30:03+00:00",
       "label": "Fokus Deutsch",
@@ -235,12 +255,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-b0627e175061-1ba61693.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__3f0a2c9b__문장편-김나지움-상급과정-과목-선택-안내-Teil-56.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8e366ed9837a-aaebd22c.mp3",
-      "size": 9437760,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8e366ed9837a-aaebd22c-n16.mp3",
+      "size": 9438188,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:29:04+00:00",
       "label": "Fokus Deutsch",
@@ -257,12 +279,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8e366ed9837a-98bd16d0.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__751347a9__문장편-김나지움-상급과정-과목-선택-안내-Teil-46.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-601edf703baa-9a504e50.mp3",
-      "size": 10637568,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-601edf703baa-9a504e50-n16.mp3",
+      "size": 10637996,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:28:10+00:00",
       "label": "Fokus Deutsch",
@@ -279,12 +303,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-601edf703baa-b7cf16d4.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__9addc5cd__문장편-김나지움-상급과정-과목-선택-안내-Teil-36.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-c9566fe45016-51f67e96.mp3",
-      "size": 11667264,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-c9566fe45016-51f67e96-n16.mp3",
+      "size": 11667692,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:27:13+00:00",
       "label": "Fokus Deutsch",
@@ -301,12 +327,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-c9566fe45016-e81ff281.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.8LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__b51781b3__문장편-김나지움-상급과정-과목-선택-안내-Teil-26.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-d604279fd9e4-b67e99db.mp3",
-      "size": 11731968,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-d604279fd9e4-b67e99db-n16.mp3",
+      "size": 11732396,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:26:10+00:00",
       "label": "Fokus Deutsch",
@@ -323,12 +351,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-d604279fd9e4-fd9d1b61.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__eafd7e65__문장편-김나지움-상급과정-과목-선택-안내-Teil-16.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-4dc6cff83061-cdc8bc13.mp3",
-      "size": 10637760,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-4dc6cff83061-cdc8bc13-n16.mp3",
+      "size": 10638188,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:25:27+00:00",
       "label": "Fokus Deutsch",
@@ -345,12 +375,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-4dc6cff83061-1899d257.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__83465ff6__단어편-독일-학업과-과목-이수-필수-어휘-Teil-33.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8b68b81f9b57-59de57cf.mp3",
-      "size": 5895360,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8b68b81f9b57-59de57cf-n16.mp3",
+      "size": 5895788,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:25:07+00:00",
       "label": "Fokus Deutsch",
@@ -367,12 +399,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8b68b81f9b57-f70fd038.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__ac24f24d__단어편-독일-학업과-과목-이수-필수-어휘-Teil-23.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-24a0c228523b-0b78d8cb.mp3",
-      "size": 6130560,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-24a0c228523b-0b78d8cb-n16.mp3",
+      "size": 6130988,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:24:49+00:00",
       "label": "Fokus Deutsch",
@@ -389,12 +423,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-24a0c228523b-993d0e53.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261020__Fokus-Deutsch__cce728cc__단어편-독일-학업과-과목-이수-필수-어휘-Teil-13.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-5dbccbd9a66d-f9eb98e8.mp3",
-      "size": 5990784,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-5dbccbd9a66d-f9eb98e8-n16.mp3",
+      "size": 5991212,
       "mime": "audio/mpeg",
       "pubDate": "2026-10-21T06:24:33+00:00",
       "label": "Fokus Deutsch",
@@ -411,7 +447,9 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-5dbccbd9a66d-c8e65b1d.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     }
   ]
 }
