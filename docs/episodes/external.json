@@ -8,6 +8,24 @@
   },
   "episodes": [
     {
+      "filename": "20261111__Fokus-Deutsch__b9b0dfec__-GPT-6-Astra가-나온-뒤로-AGI에-도달했다는-말이-매일-들립니.mp3",
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-fc189da0bf56-752b50f8.mp3",
+      "size": 16876416,
+      "mime": "audio/mpeg",
+      "pubDate": "2026-11-11T12:15:45+00:00",
+      "label": "Fokus Deutsch",
+      "title": "📖 🧵 GPT-6 Astra가 나온 뒤로 \"AGI에 도달했다\"는 말이 매일 들립니다.",
+      "display_title": "📖 🧵 GPT-6 Astra가 나온 뒤로 \"AGI에 도달했다\"는 말이 매일 들립니다.",
+      "description": "GPT-6 Astra 출시 이후 \"AGI에 도달했다\"는 말이 다시 전면에 나왔습니다. 오픈AI 사장 그렉 브록먼은 출시 브리핑을 \"AGI 시대에 온 것을 환영한다\"고 말했고, 연구총괄 마크 첸은 8월 말 TIME 취재에서 \"AGI까지 80% 왔다\"고 했으며 샘 알트만은 연말까지 내부에서 AGI라 부를 시스템이 생길 것이라고 예고했습니다. 같은 회사 인사들이 공개석상에서 AGI라는 단어를 붙인 건 이번이 처음입니다. 반대편에서는 벤치마크 포화가 AGI 증명은 아니라는 지적이 나옵니다. 프랑수아 숄레는 벤치마크 포화가 증명은 아니라고 …\n\nhttps://www.threads.com/@choi.openai/post/DdAq6G5D9wN",
+      "duration": "00:17:39",
+      "transcripts": [
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-fc189da0bf56-bcf5aa73.txt",
+          "type": "text/plain"
+        }
+      ]
+    },
+    {
       "filename": "20261111__Fokus-Deutsch__ca780b92__-다리오-아모데이가-장문의-답변을-올렸습니다.mp3",
       "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-11be63e943b3-c8d077b4.mp3",
       "size": 6009792,
