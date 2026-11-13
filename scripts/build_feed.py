@@ -108,7 +108,7 @@ def render(cfg: dict, items: list[dict]) -> str:
             f'      <enclosure url="{escape(url)}" length="{it["size"]}" type="{it["mime"]}"/>',
             f'      <guid isPermaLink="false">{escape(it["filename"])}</guid>',
             *([f'      <itunes:duration>{escape(str(it["duration"]))}</itunes:duration>'] if it.get("duration") else []),
-            *[f'      <podcast:transcript url="{escape(t["url"])}" type="{escape(t["type"])}" language="de"/>' for t in (it.get("transcripts") or [])],
+            *[f'      <podcast:transcript url="{escape(t["url"])}" type="{escape(t["type"])}" language="{escape(it.get("lang") or "de")}"/>' for t in (it.get("transcripts") or [])],
             '    </item>',
         ]
 
@@ -146,9 +146,10 @@ def apply_retention(items: list[dict], retention: dict | None) -> tuple[list[dic
     return keep, drop
 
 
-# fokus-podcast: external episodes (v2: transcripts)
-# docs/episodes/external.json 에 적힌 에피소드(오디오는 GitHub Releases)를 **별도 피드**로 만듭니다.
-#   → docs/episodes/fokus-deutsch.xml (기존 feed.xml 에는 섞이지 않음)
+# fokus-podcast: external episodes (v3: language feeds)
+# docs/episodes/external.json 에 적힌 에피소드(오디오는 GitHub Releases)를 **언어별 별도 피드**로 만듭니다.
+#   → docs/episodes/fokus-deutsch.xml · fokus-english.xml · fokus-koreanisch.xml (기존 feed.xml 에는 섞이지 않음)
+# 에피소드의 "lang" 이 어느 피드에 들어갈지 정합니다 (없으면 de). 피드 정보는 "feed"(de) 와 "feeds"(그 밖의 언어).
 # 저장소 용량을 쓰지 않으므로 retention(maxTotalMB) 계산과도 무관합니다. Fokus Podcast 앱이 관리합니다.
 def load_external() -> tuple[dict, list[dict]]:
     path = EPISODES_DIR / "external.json"
@@ -160,6 +161,11 @@ def load_external() -> tuple[dict, list[dict]]:
         print(f"external.json 읽기 실패: {e}", file=sys.stderr)
         return {}, []
     feed, rows = ({}, data) if isinstance(data, list) else (data.get("feed") or {}, data.get("episodes") or [])
+    feeds = {"de": feed}
+    if isinstance(data, dict):
+        for lang, meta in (data.get("feeds") or {}).items():
+            if lang != "de" and isinstance(meta, dict):
+                feeds[lang] = meta
     items = []
     for r in rows:
         try:
@@ -175,33 +181,39 @@ def load_external() -> tuple[dict, list[dict]]:
                 "description": r.get("description"),
                 "duration": r.get("duration"),
                 "transcripts": r.get("transcripts") or [],
+                "lang": r.get("lang") or "de",
             })
         except (KeyError, ValueError) as e:
             print(f"external.json 항목 건너뜀: {e}", file=sys.stderr)
     items.sort(key=lambda x: (x["pubDate"], x["filename"]), reverse=True)
-    return feed, items
+    return feeds, items
 
 
 def write_external_feed(cfg: dict) -> None:
-    feed, items = load_external()
-    name = feed.get("file") or "fokus-deutsch.xml"
-    if not re.fullmatch(r"[A-Za-z0-9_-]+\.xml", name):
-        print(f"external feed 파일 이름이 이상해 건너뜀: {name}", file=sys.stderr)
-        return
-    out = EPISODES_DIR / name
-    if not items and not out.exists():
-        return
-    ecfg = {k: cfg[k] for k in ("baseUrl", "ownerName", "ownerEmail", "language", "category", "explicit") if k in cfg}
-    ecfg["title"] = feed.get("title") or "Fokus Deutsch Podcast"
-    ecfg["description"] = feed.get("description") or ""
-    if feed.get("image"):
-        ecfg["image"] = feed["image"]
-    if feed.get("author"):
-        ecfg["ownerName"] = feed["author"]
-    ecfg["selfUrl"] = cfg["baseUrl"] + "episodes/" + name
-    ecfg["podcastNs"] = True  # <podcast:transcript> 를 쓰기 위한 네임스페이스 (이 피드에만)
-    out.write_text(render(ecfg, items), encoding="utf-8")
-    print(f"wrote {out.relative_to(ROOT)} ({len(items)} external episodes)")
+    feeds, items = load_external()
+    written = set()
+    for lang, feed in feeds.items():
+        name = feed.get("file") or ("fokus-deutsch.xml" if lang == "de" else "")
+        if not re.fullmatch(r"[A-Za-z0-9_-]+\.xml", name) or name in written:
+            print(f"external feed 파일 이름이 이상해 건너뜀 ({lang}): {name}", file=sys.stderr)
+            continue
+        # 피드가 없는 언어의 에피소드는 독일어 피드에 둡니다 (사라지지 않게)
+        mine = [it for it in items if (it["lang"] if it["lang"] in feeds else "de") == lang]
+        out = EPISODES_DIR / name
+        if not mine and not out.exists():
+            continue
+        written.add(name)
+        ecfg = {k: cfg[k] for k in ("baseUrl", "ownerName", "ownerEmail", "language", "category", "explicit") if k in cfg}
+        ecfg["title"] = feed.get("title") or "Fokus Deutsch Podcast"
+        ecfg["description"] = feed.get("description") or ""
+        if feed.get("image"):
+            ecfg["image"] = feed["image"]
+        if feed.get("author"):
+            ecfg["ownerName"] = feed["author"]
+        ecfg["selfUrl"] = cfg["baseUrl"] + "episodes/" + name
+        ecfg["podcastNs"] = True  # <podcast:transcript> 를 쓰기 위한 네임스페이스 (이 피드들에만)
+        out.write_text(render(ecfg, mine), encoding="utf-8")
+        print(f"wrote {out.relative_to(ROOT)} ({len(mine)} external episodes, {lang})")
 
 
 def main() -> None:
