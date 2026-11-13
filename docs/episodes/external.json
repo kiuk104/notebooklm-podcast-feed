@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261113__Fokus-Deutsch__64561fe7__단어편-Tagesspiegel-Checkpoint.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-f4750263e9dd-d62fd2de.mp3",
-      "size": 15306048,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-f4750263e9dd-d62fd2de-n16.mp3",
+      "size": 15306476,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-13T10:22:53+00:00",
       "label": "Fokus Deutsch",
@@ -27,7 +27,9 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-f4750263e9dd-fc171a5b.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261113__Fokus-Deutsch__1e952e14__문장편-Bahn-Chefin-Evelyn-Palla-im-Gespraec.mp3",
