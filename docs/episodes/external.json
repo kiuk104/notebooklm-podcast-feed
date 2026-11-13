@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261113__Fokus-Deutsch__d86f9a98__문장편-Is-Brain-Stacking-TikToks-New-Trend-.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2f1f49538142-dd52dc51.mp3",
-      "size": 16217856,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2f1f49538142-dd52dc51-n16.mp3",
+      "size": 16218284,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-13T09:22:58+00:00",
       "label": "Fokus Deutsch",
@@ -27,12 +27,14 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2f1f49538142-a445e1de.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261113__Fokus-Deutsch__1820aadf__단어편-Is-Brain-Stacking-TikToks-New-Trend-.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-ad1459bd48df-cec9808c.mp3",
-      "size": 4305600,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-ad1459bd48df-cec9808c-n16.mp3",
+      "size": 4306028,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-13T09:21:29+00:00",
       "label": "Fokus Deutsch",
@@ -49,7 +51,9 @@
           "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-ad1459bd48df-8dd740af.srt",
           "type": "application/x-subrip"
         }
-      ]
+      ],
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261111__Fokus-Deutsch__b9b0dfec__-GPT-6-Astra가-나온-뒤로-AGI에-도달했다는-말이-매일-들립니.mp3",
