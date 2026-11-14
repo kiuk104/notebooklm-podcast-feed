@@ -8,6 +8,29 @@
   },
   "episodes": [
     {
+      "filename": "20261114__Fokus-Deutsch__f6d7dc22__기업-전략의-변화와-성공의-조건.mp3",
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-744711dd1fd4-68a3044f.mp3",
+      "size": 1550208,
+      "mime": "audio/mpeg",
+      "pubDate": "2026-11-14T10:00:48+00:00",
+      "label": "Fokus Deutsch",
+      "title": "기업 전략의 변화와 성공의 조건",
+      "display_title": "기업 전략의 변화와 성공의 조건",
+      "description": "급변하는 환경 속에서 기업들이 추진하는 전략적 변화와 성공 요인을 살펴봅니다. 위험을 감수하고 새로운 도전을 받아들이는 비즈니스 독일어 표현을 함께 배워보세요.\n\n1. Viele Unternehmen haben ihre Strategie in den letzten Jahren grundlegend verändert.\n   → 많은 기업들이 최근 몇 년 동안 전략을 근본적으로 바꾸었습니다.\n   💡 grundlegend은 단순히 '기본적인'이라는 뜻을 넘어 '근본적으로, 완전히'라는 뉘앙스로 변화의 폭과 깊이를 강조할 때 즐겨 쓰입니다.\n2. Die neue Ausrichtung ergibt sich vor allem aus dem Druck, Kosten zu senken.\n   → 이러한 새로운 방향성은 무엇보다도 비용을 절감해야 한다는 압박에서 비롯됩니다.\n   💡 sich ergeben aus + Dat.는 원인이나 배경으로부터 '결과적으로 생기다, 비롯되다'를 뜻하는 격식체 표현입니다.\n3. Manche Experten schreiben diesen Wandel allein der Digitalisierung zu, doch das greift zu kurz.\n   → 어떤 전문가들은 이러한 변화를 오로지 디지털화 덕분 혹은 탓으로 돌리지만, 이는 지나치게 단순한 시각입니다.\n   💡 zuschreiben + Dat.는 원인을 어떤 요소로 돌릴 때 쓰이며, zu kurz greifen은 어떤 설명이나 관점이 '불충분하다, 단편적이다'라는 뜻의 고급 관용 표현입니다.\n4. Wer heute erfolgreich sein will, muss gewisse Risiken in Kauf nehmen.\n   → 오늘날 성공을 거두려면 어느 정도의 위험은 감수해야 합니다.\n   💡 in Kauf nehmen은 불리한 점이나 위험을 '감수하다'라는 뜻으로 일상 및 비즈니스 독일어에서 매우 자주 쓰입니다.\n5. Gleichzeitig hängt viel davon ab, ob die Mitarbeiter bereit sind, sich auf Neues einzulassen.\n   → 동시에 직원들이 새로운 것을 기꺼이 받아들이고 부딪쳐 볼 준비가 되어 있는지에 많은 것이 달려 있습니다.\n   💡 sich einlassen auf + Akk.는 낯설거나 불확실한 일에 '과감히 뛰어들다, 열린 마음으로 응하다'라는 뉘앙스를 지닙니다.",
+      "duration": "00:03:14",
+      "transcripts": [
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-744711dd1fd4-83ea29d4.vtt",
+          "type": "text/vtt"
+        },
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-744711dd1fd4-2662cdbb.srt",
+          "type": "application/x-subrip"
+        }
+      ],
+      "lang": "de"
+    },
+    {
       "filename": "20261113__Fokus-Deutsch__8fb4447a__문장편-Tagesspiegel-Checkpoint.mp3",
       "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-ed4b5aa8e280-2be3210e-n16.mp3",
       "size": 63362732,
