@@ -8,6 +8,25 @@
   },
   "episodes": [
     {
+      "filename": "20261117__Fokus-Deutsch__d543fc16__쿠라시콤-1000번-중-996번은-놀러-오게-하라-89만-명-모은-쇼핑몰.mp3",
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-c3c20a140674-cfc3b597.mp3",
+      "size": 9598848,
+      "mime": "audio/mpeg",
+      "pubDate": "2026-11-17T07:52:29+00:00",
+      "label": "Fokus 한국어",
+      "title": "📖 쿠라시콤 : 1000번 중 996번은 놀러 오게 하라, 89만 명 모은 쇼핑몰",
+      "display_title": "📖 쿠라시콤 : 1000번 중 996번은 놀러 오게 하라, 89만 명 모은 쇼핑몰",
+      "description": "롱블랙 프렌즈 L\n온라인 쇼핑몰의 첫 화면은 어때야 할까? 무신사나 올리브영처럼 할인 행사와 인기 상품, 신상품으로 가득해야겠지. 고객이 빨리, 쉽게 물건을 사게 해야 하니까.\n그런데 전혀 다른 방식으로 매출을 키운 쇼핑몰이 있어.\n홈페이지를 열면 상품 목록 대신 ‘읽을거리’가 화면을 채워. 점장이 원피스 한 벌을 세 가지 방식으로 입어 보이고, 직원들은 아끼는 물건을 소개하지. 스크롤을 내려도 내려도 계속 콘텐츠가 이어져. 가격이 붙은 상품은 무려 48개의 콘텐츠를 지나서야 나타나. 여기에 동영상과 팟캐스트까지 있어. 쇼핑몰인지 …\n\nhttps://longblack.co/note/2182",
+      "duration": "00:20:00",
+      "transcripts": [
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-c3c20a140674-47beb81c.txt",
+          "type": "text/plain"
+        }
+      ],
+      "lang": "ko"
+    },
+    {
       "filename": "20261114__Fokus-Deutsch__f6d7dc22__기업-전략의-변화와-성공의-조건.mp3",
       "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-744711dd1fd4-68a3044f-n16.mp3",
       "size": 1550636,
