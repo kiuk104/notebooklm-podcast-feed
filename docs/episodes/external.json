@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261117__Fokus-Deutsch__88ff8a4f__유린도-일본판-민음사-TV-117년-노포-서점이-유튜브로-부활한-법.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-0067fc61ddc1-e0e0b7af.mp3",
-      "size": 9712704,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-0067fc61ddc1-e0e0b7af-n16.mp3",
+      "size": 9713132,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-17T08:21:57+00:00",
       "label": "Fokus 한국어",
@@ -24,12 +24,14 @@
           "type": "text/plain"
         }
       ],
-      "lang": "ko"
+      "lang": "ko",
+      "loudness": "-16LUFS",
+      "loudness_from": "-19.3LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__f32b2415__단어편-Es-koennte-heute-passieren-Wann-Voya.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2f587a92eac1-abc16c7a.mp3",
-      "size": 11260608,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-2f587a92eac1-abc16c7a-n16.mp3",
+      "size": 11261036,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-17T08:20:39+00:00",
       "label": "Fokus Deutsch",
@@ -47,12 +49,14 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.7LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__6356f04c__요약편-Es-koennte-heute-passieren-Wann-Voya.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-84cedc85f45e-165873ae.mp3",
-      "size": 2232192,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-84cedc85f45e-165873ae-n16.mp3",
+      "size": 2232620,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-17T08:19:19+00:00",
       "label": "Fokus Deutsch",
@@ -70,7 +74,9 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__d543fc16__쿠라시콤-1000번-중-996번은-놀러-오게-하라-89만-명-모은-쇼핑몰.mp3",
