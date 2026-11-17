@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261117__Fokus-Deutsch__b13677f9__문장편-Es-koennte-heute-passieren-Wann-Voya.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-bdaf5799177a-6a228d2b.mp3",
-      "size": 43070016,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-bdaf5799177a-6a228d2b-n16.mp3",
+      "size": 43070444,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-17T08:24:16+00:00",
       "label": "Fokus Deutsch",
@@ -28,7 +28,9 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.8LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__88ff8a4f__유린도-일본판-민음사-TV-117년-노포-서점이-유튜브로-부활한-법.mp3",
