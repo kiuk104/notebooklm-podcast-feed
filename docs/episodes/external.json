@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261118__Fokus-Deutsch__098613e7__렛뎀-이론-내버려두자-내가-하자-삶의-질서를-잡는-주문.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-062c388cddd3-007b6d5e.mp3",
-      "size": 9262272,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-062c388cddd3-007b6d5e-n16.mp3",
+      "size": 9262700,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-18T09:01:08+00:00",
       "label": "Fokus 한국어",
@@ -24,12 +24,14 @@
           "type": "text/plain"
         }
       ],
-      "lang": "ko"
+      "lang": "ko",
+      "loudness": "-16LUFS",
+      "loudness_from": "-19.2LUFS"
     },
     {
       "filename": "20261118__Fokus-Deutsch__2da15d5e__문장편-Kontonummern-Krankheiten-und-die-Beh.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-669b8820fff6-1b747c73.mp3",
-      "size": 30921024,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-669b8820fff6-1b747c73-n16.mp3",
+      "size": 30921452,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-18T08:57:13+00:00",
       "label": "Fokus Deutsch",
@@ -47,7 +49,9 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.8LUFS"
     },
     {
       "filename": "20261118__Fokus-Deutsch__32ba36b6__단어편-Kontonummern-Krankheiten-und-die-Beh.mp3",
