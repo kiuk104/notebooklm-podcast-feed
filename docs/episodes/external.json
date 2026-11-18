@@ -8,6 +8,29 @@
   },
   "episodes": [
     {
+      "filename": "20261117__Fokus-Deutsch__2dbc0a7b__단어편-Luftangriff-auf-Putins-Prestigebauwe.mp3",
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8726ee3ed84e-4d6201af.mp3",
+      "size": 1554816,
+      "mime": "audio/mpeg",
+      "pubDate": "2026-11-18T08:33:50+00:00",
+      "label": "Fokus Deutsch",
+      "title": "단어편 · Luftangriff auf Putins Prestigebauwerk: Ukraine bringt Krimbrücke teilweise zum Einsturz",
+      "display_title": "단어편 · Luftangriff auf Putins Prestigebauwerk: Ukraine bringt Krimbrücke teilweise zum Einsturz",
+      "description": "오늘 에피소드에서는 뉴스나 기사에서 자주 만나는 핵심 독일어 단어 9개를 함께 알아봅니다. 실제 맥락 속에서 단어가 어떻게 쓰이는지 확인하며 어휘력을 탄탄하게 쌓아보세요.\n\n1. gelingen — 성공하다, 잘되다\n   보통 비인칭 es와 3격을 취해 'es gelingt + Dat (+ zu Inf)' 형태로 쓰이며 완료형은 sein을 씁니다. 과거분사는 gelungen입니다.\n2. nahelegen — 시사하다, 암시하다\n   분리동사로 증거나 정황이 특정 사실을 강하게 암시할 때 쓰이며, 주로 dass절을 이끕니다.\n3. einstürzen — 무너지다, 붕괴하다\n   건물이나 다리 같은 구조물이 주저앉을 때 쓰는 자동사로, 상태 변화를 나타내 완료형 조동사로 sein을 취합니다.\n4. die Echtheit — 진위, 진짜임\n   복수형 없이 주로 단수로 쓰이며, 사진이나 문서의 진위를 확인한다는 맥락에서 die Echtheit bestätigen/überprüfen 형태로 자주 쓰입니다.\n5. einstellen — (운행·활동 등을) 중단하다\n   '고용하다'라는 뜻 외에도 교통편 운행, 서비스, 업무 등을 멈출 때 자주 쓰이는 다의어 타동사입니다.\n6. der Einschlag, -ä-e — (포탄·미사일의) 탄착, 충돌\n   미사일, 포탄, 번개 등이 목표물에 떨어져 타격하는 순간이나 그 충격을 의미합니다.\n7. davon ausgehen — ~라고 추정하다, 전제하다\n   'es ist davon auszugehen, dass...' 구문으로 자주 쓰이며 객관적 정황을 바탕으로 강하게 추정할 때 사용하는 고급 표현입니다.\n8. abzielen auf (+ Akk) — ~을 겨냥하다, 목표로 하다\n   전치사 auf(+4격)와 반드시 결합하며, 정책이나 작전 등이 특정 목적을 지향할 때 자주 쓰입니다.\n9. verwehren — 거부하다, 허용하지 않다\n   문어체 표현으로 'jemandem(3격) etwas(4격) verwehren' 구문을 이루며, 권리나 통행·접근을 원천 차단할 때 씁니다.",
+      "duration": "00:03:14",
+      "transcripts": [
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8726ee3ed84e-8115dbe9.vtt",
+          "type": "text/vtt"
+        },
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8726ee3ed84e-e06e99d2.srt",
+          "type": "application/x-subrip"
+        }
+      ],
+      "lang": "de"
+    },
+    {
       "filename": "20261117__Fokus-Deutsch__47093456__요약편-Luftangriff-auf-Putins-Prestigebauwe.mp3",
       "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-eafd45fd166d-71d9eb82.mp3",
       "size": 567744,
