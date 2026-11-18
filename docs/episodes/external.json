@@ -8,6 +8,29 @@
   },
   "episodes": [
     {
+      "filename": "20261117__Fokus-Deutsch__47093456__요약편-Luftangriff-auf-Putins-Prestigebauwe.mp3",
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-eafd45fd166d-71d9eb82.mp3",
+      "size": 567744,
+      "mime": "audio/mpeg",
+      "pubDate": "2026-11-18T08:33:30+00:00",
+      "label": "Fokus Deutsch",
+      "title": "요약편 · Luftangriff auf Putins Prestigebauwerk: Ukraine bringt Krimbrücke teilweise zum Einsturz",
+      "display_title": "요약편 · Luftangriff auf Putins Prestigebauwerk: Ukraine bringt Krimbrücke teilweise zum Einsturz",
+      "description": "러시아의 핵심 보급로인 케르치 다리가 우크라이나의 미사일 공격으로 일부 파괴되어 전면 통제되었습니다.\n\n올해 수개월 동안 크림반도를 공격해 온 우크라이나군이 러시아와 연결된 핵심 통로인 케르치 다리를 부분적으로 파괴하는 데 성공한 것으로 보입니다. 우크라이나의 텔레그램 채널과 폴란드의 라도스와프 시코르스키 외무장관의 소셜미디어에는 도로교 아치와 도로 일부가 무너진 사진이 공유되었습니다. 러시아 점령 당국 역시 다리에 대한 새로운 공격을 확인하고 도로 차량 통행을 즉시 전면 중단했습니다.\n\n우크라이나 무기 제조사 파이어포인트의 관계자는 2025년에 처음 실전 배치된 자체 개발 순항미사일 플라밍고가 다리에 충돌하기 직전의 사진을 공개했습니다. 미국 전쟁연구소는 이번 타격이 러시아군이 점령지 크림반도를 지나는 핵심 육상 교통로를 이용하지 못하게 막으려는 작전의 일환이라고 분석했습니다. 2014년 러시아에 병합된 이후 2018년 블라디미르 푸틴 대통령이 직접 개통했던 이 전략적 교량은 이미 월요일 밤에도 공격을 받아 손상을 입은 상태였습니다.",
+      "duration": "00:01:11",
+      "transcripts": [
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-eafd45fd166d-d53b2d1a.vtt",
+          "type": "text/vtt"
+        },
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-eafd45fd166d-d899bf76.srt",
+          "type": "application/x-subrip"
+        }
+      ],
+      "lang": "de"
+    },
+    {
       "filename": "20261117__Fokus-Deutsch__b13677f9__문장편-Es-koennte-heute-passieren-Wann-Voya.mp3",
       "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-bdaf5799177a-6a228d2b-n16.mp3",
       "size": 43070444,
