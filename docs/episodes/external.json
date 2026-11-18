@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261118__Fokus-Deutsch__a3fd24e2__요약편-Kritik-am-Handeln-muesse-moeglich-se.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-4707bd107268-b5257cf5.mp3",
-      "size": 2199552,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-4707bd107268-b5257cf5-n16.mp3",
+      "size": 2199980,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-18T08:43:23+00:00",
       "label": "Fokus Deutsch",
@@ -28,12 +28,14 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__f7357ce3__문장편-Luftangriff-auf-Putins-Prestigebauwe.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8e621babc967-8b4922ae.mp3",
-      "size": 5091840,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8e621babc967-8b4922ae-n16.mp3",
+      "size": 5092268,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-18T08:34:28+00:00",
       "label": "Fokus Deutsch",
@@ -51,12 +53,14 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.8LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__2dbc0a7b__단어편-Luftangriff-auf-Putins-Prestigebauwe.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8726ee3ed84e-4d6201af.mp3",
-      "size": 1554816,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-8726ee3ed84e-4d6201af-n16.mp3",
+      "size": 1555244,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-18T08:33:50+00:00",
       "label": "Fokus Deutsch",
@@ -74,12 +78,14 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__47093456__요약편-Luftangriff-auf-Putins-Prestigebauwe.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-eafd45fd166d-71d9eb82.mp3",
-      "size": 567744,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-eafd45fd166d-71d9eb82-n16.mp3",
+      "size": 568172,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-18T08:33:30+00:00",
       "label": "Fokus Deutsch",
@@ -97,7 +103,9 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "de"
+      "lang": "de",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.6LUFS"
     },
     {
       "filename": "20261117__Fokus-Deutsch__b13677f9__문장편-Es-koennte-heute-passieren-Wann-Voya.mp3",
