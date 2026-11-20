@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <title>Fokus English Podcast</title>
+    <link>https://kiuk104.github.io/notebooklm-podcast-feed/</link>
+    <atom:link href="https://kiuk104.github.io/notebooklm-podcast-feed/episodes/fokus-english.xml" rel="self" type="application/rss+xml"/>
+    <description>영어 글·영상으로 만든 어학 팟캐스트 — 영어(천천히) → 한국어 해석·팁 → 원어민 속도 → 따라 말하기</description>
+    <language>ko</language>
+    <itunes:author>Fokus</itunes:author>
+    <itunes:owner>
+      <itunes:name>Fokus</itunes:name>
+      <itunes:email>kiuk104@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/cover-en-0e4f466c12.png"/>
+    <itunes:category text="Education"/>
+    <itunes:explicit>no</itunes:explicit>
+    <item>
+      <title>요약편 · Howard Lutnick Took Softer Line on Nvidia as Calls for Tougher Controls Grew</title>
+      <description>트럼프 행정부 내부에서 대중국 반도체 수출 통제를 둘러싸고 상무부와 엔비디아 간의 유착 및 이해충돌 논란이 거세지고 있습니다.
+
+트럼프 행정부 고위 관료들은 중국이 인공지능 경쟁에서 미국을 추격하지 못하도록 엔비디아의 첨단 반도체 수출 통제를 대폭 강화해야 한다는 데 폭넓게 뜻을 모으고 있습니다. 그러나 수출 통제를 총괄하는 하워드 러트닉 상무장관은 아시아 지역에 대한 기술 판매 규제를 두고 다른 고위 관리들과 끊임없이 충돌하며 엔비디아를 지나치게 감싼다는 비판을 받아 왔습니다. 행정부 내부와 의회에서는 상무부가 엔비디아 및 젠슨 황 최고경영자와 유착하여 중국으로 향하는 반도체 유출을 제대로 감독하지 못했다는 지적이 쏟아지고 있습니다.
+
+이 문제는 엔비디아의 젠슨 황 최고경영자가 중국 스파이로 의심받는 여성 앨리스 황과 관계를 맺어 왔다는 뉴욕타임스의 보도가 나오면서 큰 파문으로 번졌습니다. 앨리스 황은 엔비디아 칩을 중국으로 밀수했다는 의혹을 받는 싱가포르 기업 메가스피드의 고위 임원이었으며, 논란이 커지자 젠슨 황은 회사에서 물러나겠다고 발표했습니다. 이 사태로 인해 러트닉 장관이 엔비디아의 이익을 지키기 위해 도를 넘은 것은 아닌지, 그리고 젠슨 황의 영향력 때문에 대중국 수출 제재가 지연된 것은 아닌지 거센 의문이 제기되고 있습니다.
+
+상무부 내부에서 엔비디아는 다른 기업과 달리 특별한 우선순위로 다루어졌으며 모든 사안은 러트닉 장관의 핵심 측근인 제프 케슬러 차관보를 거쳐 처리되었습니다. 엔비디아의 팀 테터 총괄 법률고문은 상무부 조사관들에게 직접 연락하여 영향력을 행사했고, 지난해 말 메가스피드의 반도체 밀수 의혹에 대한 내부 조사는 법무부로 이첩되며 중단되기도 했습니다. 또한 실무 직원들은 도널드 트럼프 대통령과 젠슨 황의 친분 때문에 엔비디아의 반도체 판매를 적극적으로 통제하기를 꺼려 온 것으로 드러났습니다.
+
+스콧 베센트 재무장관은 백악관 회의에서 러트닉 장관에게 왜 메가스피드로 향하는 반도체 판매를 즉시 금지하지 않았느냐고 따져 물으며 갈등을 노출했습니다. 재무부와 국무부는 수개월 전부터 메가스피드를 수출 통제 대상인 거래 제한 목록에 올리자고 요구해 왔으나 상무부는 미온적인 태도를 보였습니다. 이에 대해 상무부 대변인은 회의 중 충돌이 있었다는 사실을 부인하며 반도체 밀수 단속을 성실히 수행해 왔다고 해명했습니다.
+
+러트닉 장관은 인사청문회 당시 중국에 대한 강력한 감시를 약속했지만, 실제로는 동남아시아 데이터센터를 경유한 원격 접속 우회로를 차단하려는 정부 내 규제 움직임을 줄곧 지연시켰습니다. 중국 기업들은 미국산 첨단 칩을 직접 수입하지 못하더라도 동남아의 데이터센터에 원격으로 접속해 첨단 컴퓨팅 능력을 자유롭게 활용해 왔습니다. 백악관과 주요 부처뿐만 아니라 기업인들까지 이 구멍을 막아야 한다는 데 동의했으나 러트닉 장관은 중국과의 추가 무역 갈등을 피해야 한다며 규제 도입을 늦췄습니다.
+
+러트닉 장관의 소극적인 태도는 지난해 수만 개 중국 기업을 거래 제한 목록에 올렸다가 중국의 희토류 보복으로 미국 공장들이 위협받자 서둘러 제재를 철회했던 경험 때문이라는 분석이 많습니다. 이후 상무부는 무역 합의를 깨뜨릴까 두려워 1년 넘게 새로운 대중 기술 통제를 중단한 상태입니다. 한편 젠슨 황은 트럼프 대통령을 직접 만나 로비를 벌였고, 그 결과 트럼프 대통령은 미국 정부가 수익 일부를 가져가는 조건으로 첨단 H200 반도체의 대중국 판매를 허용하는 방안까지 승인했습니다.
+
+러트닉 장관이 수십 년간 이끌었고 지금은 그의 아들들이 운영하는 투자사 캔터 피츠제럴드를 둘러싼 이해충돌 논란도 계속되고 있습니다. 이 회사는 동남아시아에서 데이터센터를 짓고 운영하는 기업들의 금융 주선을 맡고 있어 미국의 칩 규제가 강화될 경우 타격을 입을 수 있는 위치에 있습니다. 상무부 측은 러트닉 장관이 회사 지분을 모두 처분했고 어떠한 논의도 나누지 않았다고 밝혔으나 행정부 내 우려는 가라앉지 않고 있습니다.
+
+나아가 엔비디아는 상무부의 정책 초안에 총괄 법률고문이 직접 검토 의견을 달아 규제를 약화시키려 시도하는 등 이례적인 영향력을 행사해 왔습니다. 또한 엄격한 인공지능 반도체 통제를 주장하는 사상적 운동인 효과적 이타주의 성향의 외부 계약 인력을 해고하도록 상무부에 압력을 넣기도 했습니다. 상무부는 기업과의 의견 조율은 통상적인 절차이며 엄정하게 법을 집행하고 있다고 반박했지만 엔비디아를 둘러싼 특혜 논란은 쉽게 가라앉지 않을 전망입니다.</description>
+      <pubDate>Fri, 20 Nov 2026 07:50:18 GMT</pubDate>
+      <enclosure url="https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-7f9b401aedfe-1194f129.mp3" length="2465280" type="audio/mpeg"/>
+      <guid isPermaLink="false">20261120__Fokus-Deutsch__1fda8668__요약편-Howard-Lutnick-Took-Softer-Line-on-N.mp3</guid>
+      <itunes:duration>00:05:08</itunes:duration>
+      <podcast:transcript url="https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-7f9b401aedfe-53c8316d.vtt" type="text/vtt" language="en"/>
+      <podcast:transcript url="https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-7f9b401aedfe-5dead788.srt" type="application/x-subrip" language="en"/>
+    </item>
+  </channel>
+</rss>
