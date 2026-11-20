@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Fokus Podcast — 듣기</title>
+<!-- fokus-podcast listen page v2 — Fokus Podcast 앱이 올리고 고칩니다 (app/listen_page.html). 직접 고치면 다음 공유 때 덮어씁니다.
+     주소: listen.html?e=<에피소드 id 8자>[,<id>…]  — 같은 폴더의 episodes/external.json 에서 제목·MP3 주소를 찾아 재생합니다. -->
+<style>
+  :root { color-scheme: light dark; --bg: #f3f0ea; --panel: #fffcf5; --ink: #1c1f26; --muted: #7a7f8a; --line: #ddd6c4; --track: #ddd6c4; --accent: #7c4dff; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #14161b; --panel: #1c1f26; --ink: #f1efe9; --muted: #9aa1ad; --line: #333947; --track: #3a4150; --accent: #9b7bff; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Malgun Gothic", "Noto Sans KR", sans-serif; }
+  main { max-width: 640px; margin: 0 auto; padding: 24px 16px 48px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px 16px; }
+  .top { display: flex; gap: 16px; align-items: flex-start; }
+  .icon { width: 58px; height: 58px; border-radius: 12px; flex: none; display: grid; place-items: center; overflow: hidden;
+          background: linear-gradient(135deg, #8b5cf6, #3b82f6); }
+  .icon img { width: 100%; height: 100%; object-fit: cover; }
+  .icon svg { width: 30px; height: 30px; }
+  .tt { min-width: 0; flex: 1; }
+  h1 { font-size: 17px; font-weight: 600; line-height: 1.35; margin: 2px 0 2px; overflow-wrap: anywhere; }
+  .meta { color: var(--muted); font-size: 13px; }
+  .open { flex: none; color: var(--muted); padding: 4px; border-radius: 8px; line-height: 0; }
+  .open:hover { color: var(--ink); background: var(--line); }
+  .open svg { width: 20px; height: 20px; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 18px; margin: 18px 0 2px; background: none; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { height: 3px; border-radius: 2px;
+    background: linear-gradient(to right, var(--accent) var(--p, 0%), var(--track) var(--p, 0%)); }
+  input[type=range]::-moz-range-track { height: 3px; border-radius: 2px; background: var(--track); }
+  input[type=range]::-moz-range-progress { height: 3px; border-radius: 2px; background: var(--accent); }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); margin-top: -5.5px; }
+  input[type=range]::-moz-range-thumb { width: 14px; height: 14px; border: 0; border-radius: 50%; background: var(--accent); }
+  .times { display: flex; justify-content: space-between; color: var(--muted); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+  .ctl { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 4px; }
+  .ctl button { border: 0; background: none; color: var(--ink); cursor: pointer; padding: 6px; border-radius: 50%; line-height: 0; }
+  .ctl button:hover { background: var(--line); }
+  .ctl .skip svg { width: 26px; height: 26px; }
+  .ctl #play { width: 52px; height: 52px; background: var(--accent); color: #fff; display: grid; place-items: center; }
+  .ctl #play:hover { filter: brightness(1.08); background: var(--accent); }
+  .ctl #play svg { width: 24px; height: 24px; }
+  .ctl #rate { font: inherit; font-size: 14px; line-height: 1.2; min-width: 52px; padding: 8px 6px; border-radius: 99px; margin-left: 10px; }
+  .ctl .gap { width: 52px; margin-right: 10px; }   /* 속도 버튼만큼 왼쪽을 비워 재생 버튼을 가운데로 */
+  ol { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 6px; }
+  ol li { border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; cursor: pointer; font-size: 14.5px; display: flex; gap: 10px; }
+  ol li.on { border-color: var(--accent); font-weight: 600; }
+  ol li span.d { margin-left: auto; color: var(--muted); font-weight: 400; flex: none; }
+  .desc { white-space: pre-wrap; overflow-wrap: anywhere; color: var(--muted); font-size: 14.5px; margin: 18px 4px 0; }
+  .foot { text-align: center; color: var(--muted); font-size: 12.5px; margin-top: 22px; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <div class="top">
+      <div class="icon" id="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="11" r="2" fill="#fff" stroke="none"/><path d="M12 14.5V20"/>
+          <path d="M8.2 14.6a5.2 5.2 0 1 1 7.6 0"/><path d="M5.4 17.2a9 9 0 1 1 13.2 0"/></svg>
+      </div>
+      <div class="tt">
+        <h1 id="title">불러오는 중…</h1>
+        <div class="meta" id="meta"></div>
+      </div>
+      <a class="open hidden" id="download" title="MP3 내려받기" aria-label="MP3 내려받기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>
+    </div>
+    <div id="player" class="hidden">
+      <input type="range" id="seek" min="0" max="1000" value="0" step="1" aria-label="재생 위치">
+      <div class="times"><span id="cur">00:00</span><span id="dur">00:00</span></div>
+      <div class="ctl">
+        <span class="gap"></span>
+        <button class="skip" id="back" title="10초 뒤로" aria-label="10초 뒤로">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4v3.5h3.5"/><text x="12" y="15.5" text-anchor="middle" font-size="7.5" font-weight="700" fill="currentColor" stroke="none" font-family="system-ui,sans-serif">10</text></svg></button>
+        <button id="play" title="재생 / 일시정지" aria-label="재생">
+          <svg viewBox="0 0 24 24" fill="currentColor" id="icoPlay"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" id="icoPause" class="hidden"><rect x="6.5" y="5" width="4" height="14" rx="1"/><rect x="13.5" y="5" width="4" height="14" rx="1"/></svg></button>
+        <button class="skip" id="fwd" title="10초 앞으로" aria-label="10초 앞으로">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.6-5.9"/><path d="M20 4v3.5h-3.5"/><text x="12" y="15.5" text-anchor="middle" font-size="7.5" font-weight="700" fill="currentColor" stroke="none" font-family="system-ui,sans-serif">10</text></svg></button>
+        <button id="rate" title="재생 속도" aria-label="재생 속도">1x</button>
+      </div>
+    </div>
+    <ol id="parts" class="hidden"></ol>
+  </div>
+  <p class="desc" id="desc"></p>
+  <p class="foot">Fokus Podcast · 개인적으로 공유한 에피소드입니다</p>
+</main>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const LANG = { de: "독일어", en: "영어", ko: "한국어" };
+  // 주소에서 고른 에피소드 찾기: e=<id 8자> 는 파일 이름의 '__<id>__', f=<파일 이름> 은 그대로
+  function pick(rows, search) {
+    const q = new URLSearchParams(search);
+    const ids = (q.get("e") || "").split(",").map((s) => s.trim().toLowerCase()).filter((s) => /^[0-9a-f]{8}$/.test(s));
+    const out = ids.map((id) => rows.find((r) => String(r.filename || "").includes("__" + id + "__")));
+    q.getAll("f").forEach((f) => out.push(rows.find((r) => r.filename === f)));
+    return out.filter((r) => r && /^https:\/\//.test(r.url || ""));
+  }
+  if (typeof module !== "undefined") { module.exports = { pick }; return; }   // 테스트용 (node)
+
+  const fail = (msg) => { $("title").textContent = msg; $("meta").textContent = "링크를 보낸 사람에게 다시 받아 주세요."; };
+  const fmt = (s) => {
+    s = Math.max(0, Math.floor(s || 0));
+    const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60, p = (n) => String(n).padStart(2, "0");
+    return (h ? h + ":" : "") + p(m) + ":" + p(x);
+  };
+  const hms = (t) => String(t || "").split(":").reduce((a, v) => a * 60 + (Number(v) || 0), 0);   // "00:17:39" → 초
+  fetch("episodes/external.json", { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((d) => {
+    const rows = Array.isArray(d) ? d : (d.episodes || []);
+    const eps = pick(rows, location.search);
+    if (!eps.length) return fail("이 에피소드는 더 이상 올라와 있지 않습니다");
+    const feeds = Object.assign({ de: d.feed || {} }, d.feeds || {});
+    const audio = new Audio();
+    audio.preload = "metadata";
+    const seek = $("seek");
+    const RATES = [1, 1.25, 1.5, 2, 0.8];
+    let cur = 0, rate = 1, dragging = false, known = 0;
+    const clean = (t) => String(t || "").replace(/^📖\s*/, "");
+    const total = () => (isFinite(audio.duration) && audio.duration > 0 ? audio.duration : known);
+    function paint() {
+      const t = total(), pos = dragging ? seek.value / 1000 * t : audio.currentTime;
+      if (!dragging) seek.value = t ? Math.round(pos / t * 1000) : 0;
+      seek.style.setProperty("--p", (t ? pos / t * 100 : 0) + "%");
+      $("cur").textContent = fmt(pos); $("dur").textContent = fmt(t);
+    }
+    function show(i, play) {
+      cur = i;
+      const e = eps[i];
+      $("title").textContent = clean(e.display_title || e.title);
+      document.title = clean(e.display_title || e.title) + " — Fokus Podcast";
+      $("meta").textContent = [LANG[e.lang] || "", (e.pubDate || "").slice(0, 10)].filter(Boolean).join(" · ");
+      $("desc").textContent = e.description || "";
+      const img = (feeds[e.lang] || feeds.de || {}).image;
+      if (img && !$("icon").querySelector("img")) {
+        const im = new Image(); im.alt = ""; im.onload = () => { $("icon").textContent = ""; $("icon").append(im); }; im.src = img;
+      }
+      known = hms(e.duration);
+      audio.src = e.url; audio.playbackRate = rate;
+      $("download").href = e.url; $("download").classList.remove("hidden");
+      [...$("parts").children].forEach((li, k) => li.classList.toggle("on", k === i));
+      paint();
+      if (play) audio.play().catch(() => {});
+    }
+    const jump = (sec) => { audio.currentTime = Math.min(Math.max(0, audio.currentTime + sec), total() || 1e9); paint(); };
+    $("play").onclick = () => (audio.paused ? audio.play().catch(() => {}) : audio.pause());
+    $("back").onclick = () => jump(-10);
+    $("fwd").onclick = () => jump(10);
+    $("rate").onclick = () => { rate = RATES[(RATES.indexOf(rate) + 1) % RATES.length]; audio.playbackRate = rate; $("rate").textContent = rate + "x"; };
+    seek.addEventListener("input", () => { dragging = true; paint(); });
+    seek.addEventListener("change", () => { const t = total(); if (t) audio.currentTime = seek.value / 1000 * t; dragging = false; paint(); });
+    ["timeupdate", "durationchange", "loadedmetadata", "seeked"].forEach((ev) => audio.addEventListener(ev, paint));
+    const sync = () => { $("icoPlay").classList.toggle("hidden", !audio.paused); $("icoPause").classList.toggle("hidden", audio.paused); };
+    audio.addEventListener("play", sync); audio.addEventListener("pause", sync);
+    audio.addEventListener("ratechange", () => { if (audio.playbackRate !== rate) audio.playbackRate = rate; });   // 새 파일을 열어도 속도 유지
+    audio.addEventListener("ended", () => { if (cur + 1 < eps.length) show(cur + 1, true); else sync(); });         // 다음 부로 이어서
+    audio.addEventListener("error", () => { $("meta").textContent = "재생하지 못했습니다 — 오른쪽 위 버튼으로 MP3 를 내려받아 들어 보세요."; });
+    document.addEventListener("keydown", (ev) => {
+      if (ev.target.tagName === "INPUT") return;
+      if (ev.code === "Space") { ev.preventDefault(); $("play").onclick(); }
+      else if (ev.code === "ArrowLeft") jump(-10);
+      else if (ev.code === "ArrowRight") jump(10);
+    });
+    if (eps.length > 1) {
+      eps.forEach((e, k) => {
+        const li = document.createElement("li");
+        const t = document.createElement("span"); t.textContent = (k + 1) + ". " + clean(e.display_title || e.title);
+        const dd = document.createElement("span"); dd.className = "d"; dd.textContent = String(e.duration || "").replace(/^00:/, "");
+        li.append(t, dd); li.onclick = () => show(k, true);
+        $("parts").append(li);
+      });
+      $("parts").classList.remove("hidden");
+    }
+    $("player").classList.remove("hidden");
+    show(0, false);
+  }).catch(() => fail("에피소드 정보를 불러오지 못했습니다"));
+})();
+</script>
+</body>
+</html>
