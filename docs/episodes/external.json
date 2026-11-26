@@ -9,8 +9,8 @@
   "episodes": [
     {
       "filename": "20261126__Fokus-Deutsch__a66f7c35__요약편-Howard-Lutnick-Took-Softer-Line-on-N.mp3",
-      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-1bc569e081f8-01b91c86.mp3",
-      "size": 2313408,
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-1bc569e081f8-01b91c86-n16.mp3",
+      "size": 2313836,
       "mime": "audio/mpeg",
       "pubDate": "2026-11-26T06:27:28+00:00",
       "label": "Fokus English",
@@ -28,7 +28,9 @@
           "type": "application/x-subrip"
         }
       ],
-      "lang": "en"
+      "lang": "en",
+      "loudness": "-16LUFS",
+      "loudness_from": "-20.4LUFS"
     },
     {
       "filename": "20261126__Fokus-Deutsch__7e5528cf__뇌과학자-장동선-마음처럼-내-뇌의-그릇도-넓힐-수-있다.mp3",
