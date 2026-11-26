@@ -8,6 +8,25 @@
   },
   "episodes": [
     {
+      "filename": "20261126__Fokus-Deutsch__7e5528cf__뇌과학자-장동선-마음처럼-내-뇌의-그릇도-넓힐-수-있다.mp3",
+      "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-160f1b57e501-0928263d.mp3",
+      "size": 10323456,
+      "mime": "audio/mpeg",
+      "pubDate": "2026-11-26T06:00:44+00:00",
+      "label": "Fokus 한국어",
+      "title": "📖 뇌과학자 장동선 : 마음처럼 내 뇌의 그릇도 넓힐 수 있다",
+      "display_title": "📖 뇌과학자 장동선 : 마음처럼 내 뇌의 그릇도 넓힐 수 있다",
+      "description": "롱블랙 프렌즈 C\n가끔 그럴 때 있지 않으세요? 다른 사람의 사소한 말에 상처받는 제가 한심스러운 순간요. ‘난 대체 언제쯤 단단한 사람이 될 수 있을까’ 한탄하곤 해요.\n그런 마음이 들면 한 번씩 보는 영상이 있어요. 2017년 한 뇌과학자가 예능에서 한 말을 담은 영상이죠. 그는 부둣가에서 사람들과 식사하던 중, 느닷없이 갑각류의 성장을 이야기해요. 가재나 새우 같은 것들은 성장할 때 단단한 허물을 벗고 가장 약한 상태에 놓인다고 말하죠. 그리고 이렇게 덧붙여요.\n“내가 성장할 수 있는 순간은, 내가 가장 약해지고 상처받을 수 …\n\nhttps://longblack.co/note/1305",
+      "duration": "00:21:30",
+      "transcripts": [
+        {
+          "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-160f1b57e501-6f7d94a5.txt",
+          "type": "text/plain"
+        }
+      ],
+      "lang": "ko"
+    },
+    {
       "filename": "20261120__Fokus-Deutsch__990f32ae__시험의-위기-점수를-향한-믿음이-무너진-시대-8인의-생각을-듣다.mp3",
       "url": "https://github.com/kiuk104/notebooklm-podcast-feed/releases/download/fokus-deutsch-audio/fokus-59669d02ea37-76291a8c-n16.mp3",
       "size": 9663404,
